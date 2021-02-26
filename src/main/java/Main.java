@@ -8,7 +8,8 @@ public class Main {
     Scanner scanner = new Scanner(System.in);
     Calculator calculator = new Calculator();
     String operation = "";
-    while (true) {
+    while (scanner.hasNext()) {
+      operation = scanner.nextLine();
       if (operation.equals("add")) {
         int a = Integer.parseInt(scanner.nextLine());
         int b = Integer.parseInt(scanner.nextLine());
@@ -40,7 +41,6 @@ public class Main {
       } else if (operation.equals("quit")){
         break;
       }
-      operation = scanner.nextLine();
     }
   }
 }
