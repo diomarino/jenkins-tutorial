@@ -6,9 +6,8 @@ public class Main {
   public static void main(String args[]) throws IOException {
     BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
     Calculator calculator = new Calculator();
-
+    String operation = reader.readLine();
     while (true) {
-      String operation = reader.readLine();
       if (operation.equals("add")) {
         int a = Integer.parseInt(reader.readLine());
         int b = Integer.parseInt(reader.readLine());
@@ -40,6 +39,7 @@ public class Main {
       } else if (operation.equals("quit")){
         break;
       }
+      operation = reader.readLine();
     }
   }
 }
